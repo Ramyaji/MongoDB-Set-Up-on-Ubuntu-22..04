@@ -124,5 +124,58 @@ mongodb://Senior_1:readwrite@access1@ip-172-31-28-226.ec2.internal:27017/PKR_Mon
 
 
 
+Create Database using CLI
+   mongosh
+   show dbs
+   use tkp_Dev_DB
+
+    db.createUser({
+    user: "tkp_Dev_User",
+    pwd: "P6V-WM}NY@DcxQ",
+    roles: [{ role: "readWrite", db: "tkp_Dev_DB" }]
+})
+
+
+--------------------------------------------------------------------
+
+db.createUser(
+            {
+                user: "tkp_Dev_User",
+                pwd: "P6V-WM}NY@DcxQ",
+                roles: [ { role: "readWrite", db: "tkp_Dev_DB" } ]
+            }
+        )
+
+------------------------------------------------------------------------
+mongodb://tkp_Dev_User:P6V-WM}NY@DcxQ@ec2-13-235-248-254.ap-south-1.compute.amazonaws.com:27017/tkp_Dev_DB?authSource=tkp_Dev_DB
+
+
+mongodb://tkp_stg_User:ZRx9-Dsr3%3ATgKw@ec2-13-126-236-164.ap-south-1.compute.amazonaws.com:27017/tkp_stg_DB?authSource=tkp_stg_DB
+
+
+
+
+db.createUser(
+            {
+                user: "tkp_stg_User",
+                pwd: "ZRx9-Dsr3:TgKw",
+                roles: [ { role: "readWrite", db: "tkp_stg_DB" } ]
+            }
+        )
+
+show dbs
+   use tkp_stg_DB
+
+   db.createUser({
+    user: "tkp_stg_User",
+    pwd: "ZRx9-Dsr3:TgKw",
+    roles: [{ role: "readWrite", db: "tkp_stg_DB" }]
+})
+-----------------------------------------------------------------------------------------------------------
+
+mongodb://tkp_stg_User:ZRx9-Dsr3%3ATgKw@ec2-13-126-236-164.ap-south-1.compute.amazonaws.com:27017/tkp_stg_DB?authSource=tkp_stg_DB
+
+
+
 
    
