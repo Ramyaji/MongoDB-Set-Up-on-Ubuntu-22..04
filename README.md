@@ -147,10 +147,10 @@ db.createUser(
         )
 
 ------------------------------------------------------------------------
-mongodb://tkp_Dev_User:P6V-WM}NY@DcxQ@ec2-13-235-248-254.ap-south-1.compute.amazonaws.com:27017/tkp_Dev_DB?authSource=tkp_Dev_DB
+mongodb://tkp_Dev_User:P6V-WM}NY@DcxQ@host_dns:27017/tkp_Dev_DB?authSource=tkp_Dev_DB
 
 
-mongodb://tkp_stg_User:ZRx9-Dsr3%3ATgKw@ec2-13-126-236-164.ap-south-1.compute.amazonaws.com:27017/tkp_stg_DB?authSource=tkp_stg_DB
+
 
 
 
@@ -173,7 +173,7 @@ show dbs
 })
 -----------------------------------------------------------------------------------------------------------
 
-mongodb://tkp_stg_User:ZRx9-Dsr3%3ATgKw@ec2-13-126-236-164.ap-south-1.compute.amazonaws.com:27017/tkp_stg_DB?authSource=tkp_stg_DB
+mongodb://tkp_stg_User:ZRx9-Dsr3%3ATgKw@ehost_dns:27017/tkp_stg_DB?authSource=tkp_stg_DB
 
 
 
