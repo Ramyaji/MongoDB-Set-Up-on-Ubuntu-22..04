@@ -7,6 +7,7 @@ https://medium.com/@namestarlit/mongodb-installation-on-ubuntu-22-04-lts-6399803
 https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
 https://www.mongodb.com/try/download/community
 https://www.mongodb.com/docs/compass/current/install/
+https://docs.google.com/document/d/1smYmCNT_EhqbLi2zxBisZYYDIxQlJvUgrMdFlzOqMys/edit?pli=1
 
 
 
@@ -57,5 +58,71 @@ Commands used
 
    useful Notes
    https://drive.google.com/file/d/1-x3B4r9ijsoITqXsgHjp2CKKuupJBASS/view
+
+   Create Database using CLI
+   mongosh
+   show dbs
+   use PKR_MongoDB
+
+   db.createUser({
+    user: "Accelya_Dev",
+    pwd: "Purple@$123",
+    roles: [{ role: "readWrite", db: "PKR_MongoDB" }]
+})
+
+
+
+######
+db.createUser({
+    user: "developer",
+    pwd: "password123",
+    roles: [{ role: "readWrite", db: "my_database" }]
+})
+######
+
+connection string to connect mongodb for developer
+
+mongodb://Accelya_Dev:Purple@$123@54.210.129.158:27017/PKR_MongoDB
+
+###### READ ACCESS #####
+
+db.createUser(
+            {
+                user: "Junior_1",
+                pwd: "read@access1",
+                roles: [ { role: "read", db: "PKR_MongoDB" } ]
+            }
+        )
+
+###### READ AND WRITE ACCESS #####
+
+        db.createUser(
+            {
+                user: "Senior_1",
+                pwd: "readwrite@access1",
+                roles: [ { role: "readWrite", db: "PKR_MongoDB" } ]
+            }
+        )
+
+
+#### HOW JUNIOR ACCESS DB WITH READ PERMISSION THE CONNECTION URI ####
+mongodb://Junior_1:read@access1@54.210.129.158:27017/PKR_MongoDB?authSource=PKR_MongoDB
+
+OR DNS instead IP is better security
+mongodb://Junior_1:read@access1@ip-172-31-28-226.ec2.internal:27017/PKR_MongoDB?authSource=PKR_MongoDB
+
+
+
+
+#### HOW SENIOR ACCESS DB WITH READ&WRITE PERMISSION THE CONNECTION URI ####
+mongodb://Senior_1:readwrite@access1@54.210.129.158:27017/PKR_MongoDB?authSource=PKR_MongoDB
+
+OR  
+
+mongodb://Senior_1:readwrite@access1@ip-172-31-28-226.ec2.internal:27017/PKR_MongoDB?authSource=PKR_MongoDB
+
+
+
+
 
    
